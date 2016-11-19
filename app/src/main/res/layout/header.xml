@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:text="收件箱"
+
+        android:id="@+id/textView3"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textSize="70px"
+        android:background="#1b68e6"
+        android:textColor="#fbf7f7" />
+</LinearLayout>

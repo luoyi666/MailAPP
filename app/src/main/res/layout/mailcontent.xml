@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/tv_addr"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:background="@drawable/bg_edittext"
+        android:textIsSelectable="true"
+        android:textColor="#e48c8c"
+        android:textSize="50px"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/tv_mailsubject"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:background="@drawable/bg_edittext"
+        android:textIsSelectable="true"
+        android:textColor="#ea9090"
+        android:textSize="70px"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_below="@+id/tv_addr"
+        android:layout_toEndOf="@+id/textView" />
+
+    <ListView
+        android:id="@+id/lv_mailattachment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_mailsubject"
+        android:layout_margin="5dp"
+        android:background="@color/yellow"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/tv_mailcontent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/pink"
+        android:ems="10"
+        android:gravity="top"
+        android:textIsSelectable="true"
+        android:textSize="60px"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_above="@+id/btn_holder"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_mailsubject" />
+
+    <LinearLayout
+        android:id="@+id/btn_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btn_cancel" />
+
+        <Button
+            android:id="@+id/btn_relay"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btn_relay" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发件人地址："
+        android:id="@+id/textView"
+        android:textSize="60px"
+        android:layout_alignBottom="@+id/tv_addr"
+        android:layout_alignStart="@+id/tv_mailcontent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="邮件主题："
+        android:id="@+id/textView2"
+        android:textIsSelectable="false"
+        android:textSize="60px"
+        android:layout_alignBottom="@+id/tv_mailsubject"
+        android:layout_alignStart="@+id/tv_mailcontent" />
+
+</RelativeLayout>
